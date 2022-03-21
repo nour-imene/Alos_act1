@@ -1,0 +1,11 @@
+var unirest = require("unirest")
+
+var req = unirest("GET" , "http://localhost:3000/posts")
+ 
+req.headres({
+  "cache-control": "no-cache",
+})
+req.end(function (res){
+  if (res.erro) throw Error(res.error)
+  console.log(res.body)
+})
