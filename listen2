@@ -1,6 +1,6 @@
 var unirest = require("unirest")
 
-var req = unirest("GET" , "http://localhost:3000/posts")
+var req = unirest("POST" , "http://localhost:3000/posts")
  
 req.headres({
   "cache-control": "no-cache",
